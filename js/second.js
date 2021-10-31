@@ -15,3 +15,20 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+let randomArray = ["Geri", 26, "Flóra"];
+let primitive = 2;
+console.log(randomArray.indexOf(primitive));
+
+function checker(randomArray, primitive){
+    let output = {
+        exists: randomArray.includes(primitive) ? true : false,
+        index: randomArray.indexOf(primitive),
+        allElementsAreNumbers: randomArray.every(function (element) {
+			return typeof element === 'number';
+		}),
+        someElementsAreNumbers: randomArray.some(function (element) {
+			return typeof element === 'number';
+		}),
+    }
+    return output
+}

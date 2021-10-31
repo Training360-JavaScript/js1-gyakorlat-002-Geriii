@@ -4,3 +4,11 @@
 - A függvény neve `generateList` legyen!
 - A HTML-template egy lista, amelynek a listaelemei a kapott tömb értékeit tartalmazzák.
 */
+const generateList = function (listItems) {
+	let markup = `<ul>`;
+	for (const i of listItems) {
+	  markup += `<li>${i}</li>`;
+	}
+	
+	return markup += `</ul>`;
+}
